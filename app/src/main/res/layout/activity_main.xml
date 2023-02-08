@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#00FF55">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LISTADOS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/btnSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Spinner"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnSpinnerListener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spinner con Listener"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnSpinnerAdaptador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spinner con Adaptador"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnSpinnerAdaptadorConRecurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spinner con Adaptador con Recurso"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnSpinnerDinamico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spinner Dinámico"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnListViewEntries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List View con Entries"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnListViewAdapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List View con Adaptador"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnListViewPersonalizada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List View Personalizada"
+        android:onClick="onCLickBtn"/>
+
+    <Button
+        android:id="@+id/btnListViewDinamica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List View Personalizada"
+        android:onClick="onCLickBtn"/>
+
+
+    <Button
+        android:id="@+id/btnListViewDinamicaFotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List View Personalizada con Fotos"
+        android:onClick="onCLickBtn"/>
+
+
+    <Button
+        android:id="@+id/btnListViewDinamicaFotos2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List View Personalizada con Fotos e Información"
+        android:onClick="onCLickBtn"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#00FF55">
+
+    <TextView
+        android:id="@+id/tvPlaneta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ListView Dinámica"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etPlaneta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Planeta"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_marginBottom="10dp"/>
+
+
+    <ListView
+        android:id="@+id/lvPlanetas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:divider="@color/purple_500"
+        android:dividerHeight="2dp"
+        android:layout_margin="6dp"/>
+
+</LinearLayout>
