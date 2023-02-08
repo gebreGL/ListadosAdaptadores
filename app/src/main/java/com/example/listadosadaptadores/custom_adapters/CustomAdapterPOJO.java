@@ -36,24 +36,42 @@ public class CustomAdapterPOJO extends ArrayAdapter<Planeta> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        //Crear instancia del objeto inflador --> LayoutInflater
-        LayoutInflater layoutInflater = context.getLayoutInflater();
+        View fila = convertView;
+        ViewHolder viewHolder = new ViewHolder();
 
-        //Aplico el método de inflado sobre el objeto inflador
-        View fila = layoutInflater.inflate(R.layout.fila_simple, null);
+        if (fila == null) {
 
-        //Capturamos los id de cada componente de mi layout personalizado (en este caso TextView e ImagenView)
-        TextView tvPlaneta = fila.findViewById(R.id.tvPlaneta);
-        TextView tvInfoPlaneta = fila.findViewById(R.id.tvInformacion);
-        ImageView ivPlaneta = fila.findViewById(R.id.imgPlaneta);
+            //Crear instancia del objeto inflador --> LayoutInflater
+            LayoutInflater layoutInflater = context.getLayoutInflater();
 
+            //Aplico el método de inflado sobre el objeto inflador
+            fila = layoutInflater.inflate(R.layout.fila_simple, null);
+
+            //Capturamos los id de cada componente de mi layout personalizado (en este caso TextView e ImagenView)
+            viewHolder.tvPlaneta = fila.findViewById(R.id.tvPlaneta);
+            viewHolder.tvInfoPlaneta = fila.findViewById(R.id.tvInformacion);
+            viewHolder.ivPlaneta = fila.findViewById(R.id.imgPlaneta);
+            fila.setTag(viewHolder);
+
+        } else {
+
+            viewHolder = (ViewHolder) fila.getTag();
+        }
         Planeta planeta = planetas.get(position);
 
         //Insertamos en cada componente el valor correspondiente de cada atributo de la clase Planeta
-        tvPlaneta.setText(planeta.getNombre());
-        tvInfoPlaneta.setText(planeta.getInformacion());
-        ivPlaneta.setImageResource(planeta.getIdFoto());
+        viewHolder.tvPlaneta.setText(planetas.getNombre());
+        viewHolder.tvInfoPlaneta.setText(planeta.getInformacion());
+        viewHolder.ivPlaneta.setImageResource(planeta.getIdFoto());
+
+
 
         return fila;
+    }
+
+    private class ViewHolder {
+        private TextView tvPlaneta;
+        private TextView tvInfoPlaneta;
+        private ImageView ivPlaneta;
     }
 }

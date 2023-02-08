@@ -17,7 +17,7 @@ public class _9_ListViewPersonalizadaFotosActivity extends AppCompatActivity {
 
     private ListView lvPlanetas;
     private ImageView ivPlaneta;
-    private TypedArray arrayIdFotos;
+    /*private TypedArray int[] arrayIdFotos;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,25 +28,25 @@ public class _9_ListViewPersonalizadaFotosActivity extends AppCompatActivity {
         ivPlaneta = findViewById(R.id.imgPlaneta);
 
         //Necesario para TypedArray
-        arrayIdFotos =getResources().obtainTypedArray(R.array.fotos);
+        /*arrayIdFotos = getResources().obtainTypedArray(R.array.fotos);*/
 
         //Array de los recursos(fotos/drawables)
-        /*int[] arrayIdFotos = {R.drawable.mercurio, R.drawable.venus, R.drawable.tierra,
+        int[] arrayIdFotos = {R.drawable.mercurio, R.drawable.venus, R.drawable.tierra,
                 R.drawable.marte, R.drawable.jupiter, R.drawable.saturno,
-                R.drawable.urano, R.drawable.neptuno};*/
+                R.drawable.urano, R.drawable.neptuno};
 
         //Versión  Mejorada con TypedArray CustomAdapter
-        CustomAdapter adaptador = new CustomAdapter(this,
+        /*CustomAdapter adaptador = new CustomAdapter(this,
                 R.layout.fila_simple,
                 getResources().getStringArray(R.array.planetas),
-                arrayIdFotos);
+                arrayIdFotos);*/
 
         //Versión 1 CustomAdapter2 asociado al array de enteros de los drawables
-        /*CustomAdapter2 adaptador2 = new CustomAdapter2(this,
+        CustomAdapter2 adaptador2 = new CustomAdapter2(this,
                 R.layout.fila_simple2,
                 getResources().getStringArray(R.array.planetas),
                 arrayIdFotos,
-                getResources().getStringArray(R.array.informacion));*/
+                getResources().getStringArray(R.array.informacion));
 
         //Adaptador por defecto
         /*ArrayAdapter<String> adaptador = new ArrayAdapter<>(
@@ -55,7 +55,7 @@ public class _9_ListViewPersonalizadaFotosActivity extends AppCompatActivity {
                 R.id.tvPlaneta, //Id de la TextView
                 getResources().getStringArray(R.array.planetas));*/
 
-        lvPlanetas.setAdapter(adaptador);
+        lvPlanetas.setAdapter(adaptador2);
 
         lvPlanetas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

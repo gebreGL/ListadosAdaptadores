@@ -36,9 +36,9 @@ public class _10_ListViewPersonalizadaPOJO extends AppCompatActivity {
 
         arrayPlanetas = new ArrayList<Planeta>();
 
-        for (int i = 0; i < ; i++) {
-            arrayPlanetas.add(new Planeta());
-        }
+//        for (int i = 0; i < ; i++) {
+//            arrayPlanetas.add(new Planeta());
+//        }
 
 
         //Versión  Mejorada con TypedArray CustomAdapter
